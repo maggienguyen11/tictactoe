@@ -1,0 +1,170 @@
+<html>
+  <head>
+    <script src="js/TicTacToe.js"></script>
+	<link rel="stylesheet" href="css/TicTacToe.css"/>
+    <title>Tic Tac Toe Game</title>
+  </head>
+  <body>
+  <h2> Tic Tac Toe Game Using  JavaScript, CSS and HTML</h2>
+    <h4> Maggie Nguyen</h4>
+    <p class="center italic">Two players (one human and one computer)</p>
+    <p class="center">Click on a square below to begin playing. Good luck!</p>
+   
+   <div id="board-outer" class="center"> 
+        <table class="center"id="board" >
+		 <FORM NAME="tictac" method="post">
+            <tr>
+                <td><INPUT  NAME="sqr1"  value="     " onClick="if(document.tictac.sqr1.value == '     ' && turn == 0 && mode == 1) 
+				{
+				document.tictac.sqr1.value = ' X '; sqr1T = 1; turn = 1; vari(); win();
+				} 
+				else if(document.tictac.sqr1.value == '     ' && turn == 1 && mode == 2) 
+				{
+				document.tictac.sqr1.value = ' X '; sqr1T = 1; turn = 0; vari(); humanPlayer()
+				}
+				else if(document.tictac.sqr1.value == '     ' && turn == 0 && mode == 2) 
+				{
+				document.tictac.sqr1.value = ' O '; sqr1T = 1; turn = 1; vari(); humanPlayer()
+				} 
+				drawCheck()">
+				</td>
+                <td ><INPUT  NAME="sqr2"  value="     " onClick="if(document.tictac.sqr2.value == '     ' && turn == 0 && mode == 1) 
+				{
+				document.tictac.sqr2.value = ' X '; sqr2T = 1; turn = 1; vari(); win();
+				} 
+				else if(document.tictac.sqr2.value == '     ' && turn == 1 && mode == 2) 
+				{
+				document.tictac.sqr2.value = ' X '; sqr2T = 1; turn = 0; vari(); phumanPlayer()
+				} 
+				else if(document.tictac.sqr2.value == '     ' && turn == 0 && mode == 2) 
+				{
+				document.tictac.sqr2.value = ' O '; sqr2T = 1; turn = 1; vari(); humanPlayer()
+				} 
+				drawCheck()">
+				</td>
+                <td><INPUT  NAME="sqr3"  value="     " onClick="if(document.tictac.sqr3.value == '     ' && turn == 0 && mode == 1) 
+				{
+				document.tictac.sqr3.value = ' X '; sqr3T = 1; turn = 1; vari(); win();
+				} 
+				else if(document.tictac.sqr3.value == '     ' && turn == 1 && mode == 2) 
+				{
+				document.tictac.sqr3.value = ' X '; sqr3T = 1; turn = 0; vari(); humanPlayer()
+				}
+				else if(document.tictac.sqr3.value == '     ' && turn == 0 && mode == 2) 
+				{
+				document.tictac.sqr3.value = ' O '; sqr3T = 1; turn = 1; vari(); humanPlayer()
+				} drawCheck()">
+				</td>
+            </tr>
+            <tr>
+                <td><INPUT  NAME="sqr4"  value="     " onClick="if(document.tictac.sqr4.value == '     ' && turn == 0 && mode == 1) 
+				{
+				document.tictac.sqr4.value = ' X '; sqr4T = 1; turn = 1; vari(); win();
+				} 
+				else if(document.tictac.sqr4.value == '     ' && turn == 1 && mode == 2) 
+				{
+				document.tictac.sqr4.value = ' X '; sqr4T = 1; turn = 0; vari(); humanPlayer()
+				} 
+				else if(document.tictac.sqr4.value == '     ' && turn == 0 && mode == 2) 
+				{
+				document.tictac.sqr4.value = ' O '; sqr4T = 1; turn = 1; vari(); humanPlayer()
+				}
+				drawCheck()">
+				</td>
+                <td><INPUT  NAME="sqr5"  value="     " onClick="if(document.tictac.sqr5.value == '     ' && turn == 0 && mode == 1)
+				{
+				document.tictac.sqr5.value = ' X '; sqr5T = 1; turn = 1; vari(); win();
+				} 
+				else if(document.tictac.sqr5.value == '     ' && turn == 1 && mode == 2) 
+				{
+				document.tictac.sqr5.value = ' X '; sqr5T = 1; turn = 0; vari(); humanPlayer()
+				} 
+				else if(document.tictac.sqr5.value == '     ' && turn == 0 && mode == 2) 
+				{
+				document.tictac.sqr5.value = ' O '; sqr5T = 1; turn = 1; vari(); humanPlayer()
+				}
+				 drawCheck()">
+				 </td>
+                <td><INPUT  NAME="sqr6"  value="     " onClick="if(document.tictac.sqr6.value == '     ' && turn == 0 && mode == 1) 
+				{
+				document.tictac.sqr6.value = ' X '; sqr6T = 1; turn = 1; vari(); win();
+				}
+			    else if(document.tictac.sqr6.value == '     ' && turn == 1 && mode == 2) 
+				{
+				document.tictac.sqr6.value = ' X '; sqr6T = 1; turn = 0; vari(); humanPlayer()
+				}
+				else if(document.tictac.sqr6.value == '     ' && turn == 0 && mode == 2) 
+				{
+				document.tictac.sqr6.value = ' O '; sqr6T = 1; turn = 1; vari(); humanPlayer()
+				}
+				 drawCheck()">
+				 </td>
+            </tr>
+            <tr>
+                <td ><INPUT  NAME="sqr7" class="MStyle" value="     " onClick="if(document.tictac.sqr7.value == '     ' && turn == 0 && mode == 1) 
+				{
+				document.tictac.sqr7.value = ' X '; sqr7T = 1; turn = 1; vari(); win();
+				} 
+				else if(document.tictac.sqr7.value == '     ' && turn == 1 && mode == 2) 
+				{
+				document.tictac.sqr7.value = ' X '; sqr7T = 1; turn = 0; vari(); humanPlayer()
+				} 
+				else if(document.tictac.sqr7.value == '     ' && turn == 0 && mode == 2) 
+				{
+				document.tictac.sqr7.value = ' O '; sqr7T = 1; turn = 1; vari(); humanPlayer()
+				} drawCheck()">
+				</td>
+                <td ><INPUT  NAME="sqr8" class="MStyle" value="     " onClick="if(document.tictac.sqr8.value == '     ' && turn == 0 && mode == 1) 
+				{
+				document.tictac.sqr8.value = ' X '; sqr8T = 1; turn = 1; vari(); win();
+				} 
+				else if(document.tictac.sqr8.value == '     ' && turn == 1 && mode == 2) 
+				{
+				document.tictac.sqr8.value = ' X '; sqr8T = 1; turn = 0; vari(); humanPlayer()
+				} 
+				else if(document.tictac.sqr8.value == '     ' && turn == 0 && mode == 2) 
+				{
+				document.tictac.sqr8.value = ' O '; sqr8T = 1; turn = 1; vari(); humanPlayer()
+				} 
+				drawCheck()">
+				</td>
+                <td ><INPUT  NAME="sqr9" class="MStyle" value="     " onClick="if(document.tictac.sqr9.value == '     ' && turn == 0 && mode == 1) 
+				{
+				document.tictac.sqr9.value = ' X '; sqr9T = 1; turn = 1; vari(); win();
+				} 
+				else if(document.tictac.sqr9.value == '     ' && turn == 1 && mode == 2) 
+				{
+				document.tictac.sqr9.value = ' X '; sqr9T = 1; turn = 0; vari(); humanPlayer()
+				} 
+				else if(document.tictac.sqr9.value == '     ' && turn == 0 && mode == 2) 
+				{
+				document.tictac.sqr9.value = ' O '; sqr9T = 1; turn = 1; vari(); humanPlayer()
+				} drawCheck()">
+				</td>
+            </tr>
+			</form>
+        </table>
+    </div>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   
+  </body>
+</html>
